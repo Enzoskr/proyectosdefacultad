@@ -63,7 +63,7 @@ int main()
 //ejercicio 5 
 //pow es para hacer este tipo de operaciones
 
-int main (){
+/*int main (){
 
     int numbase, numexpo  ;
     
@@ -75,5 +75,28 @@ int main (){
 
     printf("El resultado de %d elevado a la %d es: %d\n", numbase, numexpo, resultado);
 
-}
+}*/
 
+//ejercicio 6
+
+int main(){
+
+    int numero ,numdoble ,numtriple , nummitad ;
+ 
+
+    printf("Ingrese un numero: ");
+    scanf("%d", &numero);
+    
+    numdoble = numero*2;
+    numtriple = numero*3;
+    nummitad = numero/2;
+    printf("El doble de %d es: %d\n", numero, numdoble);
+    
+    printf("El triple de %d es: %d\n", numero, numtriple);
+    
+    printf("La mitad de %d es: %d\n", numero, nummitad);
+    
+
+    return 0;
+
+}
