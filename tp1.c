@@ -78,25 +78,102 @@ int main()
 }*/
 
 //ejercicio 6
-
+/*
 int main(){
 
     int numero ,numdoble ,numtriple , nummitad ;
  
-
     printf("Ingrese un numero: ");
     scanf("%d", &numero);
     
     numdoble = numero*2;
     numtriple = numero*3;
     nummitad = numero/2;
+    
     printf("El doble de %d es: %d\n", numero, numdoble);
-    
     printf("El triple de %d es: %d\n", numero, numtriple);
-    
     printf("La mitad de %d es: %d\n", numero, nummitad);
-    
 
+    return 0;
+}
+*/
+
+
+//ejercicio 7
+
+/* int main(){
+    
+    int impenpesos, imp80, imp20,imp15;    
+
+    printf("Ingrese el importe en pesos: ");
+    scanf("%d", &impenpesos);
+
+    imp80 = impenpesos * 0.80;
+    imp20 = impenpesos * 0.20;
+    imp15 = impenpesos * 0.15;
+
+    printf("El 80 porciento de %d es: %d\n", impenpesos, imp80);
+    printf("El 20 porciento de %d es: %d\n", impenpesos, imp20);
+    printf("El 15 porciento de %d es: %d\n", impenpesos, imp15);
+
+    return 0;
+    
+}
+ */
+
+//ejercicio 8
+//aca hay que agregarles variables en float para que no de error o de resultado en decimales
+
+
+/* int main(){
+    float impesos, impdolares ; 
+    
+    printf("Ingrese el importe en pesos: ");
+    scanf("%f", &impesos);
+    
+    impdolares = impesos / 15.40;
+    
+    printf("El importe en dolares es: %.2f\n", impdolares);
+    
     return 0;
 
 }
+ */
+
+//ejericio 9
+/* int main(){
+    float radio, perimetro, area;
+    const float pi = 3.1416;
+
+    printf("Ingrese el radio del circulo: ");
+    scanf("%f", &radio);
+
+    perimetro = 2 * pi * radio;
+    area = pi * radio * radio;
+
+    printf("El perimetro del circulo es: %.2f\n", perimetro);
+    printf("El area del circulo es: %.2f\n", area);
+
+    return 0;
+}
+ */
+
+//ejercicio 10
+//utilizamos la libreria math.h para poder usar la funcion sqrt
+//tambien en el cateto 1 y 2 se le agrega ,2 para que de resuldados en decimales
+// utilizamos la funcion pow para elevar al cuadrado los catetos
+
+/* int main(){
+    float cateto1, cateto2, hipotenusa;
+
+    printf("Ingrese el cateto 1: ");
+    scanf("%f", &cateto1);
+    printf("Ingrese el cateto 2: ");
+    scanf("%f", &cateto2);
+
+    hipotenusa = sqrt(pow(cateto1,2) + pow(cateto2,2));
+
+    printf("La hipotenusa es: %.2f\n", hipotenusa);
+
+return 0;
+} */
