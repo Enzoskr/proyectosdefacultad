@@ -176,8 +176,54 @@ int main(){
     printf("La hipotenusa es: %.2f\n", hipotenusa);
 
 return 0;
+<<<<<<< HEAD
 } */
 
+//ejercicio 11
+/*int main (){
+
+	float tempcent, tempk, tempf;
+	
+
+	
+		 printf("ingrese los grados centigrados:  ") ;
+		 scanf("%f", &tempcent);
+		 
+		 tempk= (tempcent+273.15);
+		 tempf=((tempcent*1.8)+32);
+		 
+		 printf("la temperatura en fahrenheit es de: %f\n", tempf );
+		 
+		 printf("la temperatura en grados kelvin es de: %f\n", tempk);
+	
+	return 0;
+	system("\n pause");
+}*/
+//ejercicio 12
+
+/*int main(){
+	
+	float mts, milla, pulgada,yarda, pie;
+	
+	printf("ingresa una cantidad de metros: ");
+	scanf("%f", &mts);
+	printf("ingresa una cantidad expresada en pie: ");
+	scanf("%f", &pie);
+	
+	yarda=(pie*3);
+	pulgada=(mts*0.0254);
+	milla=(mts*1609);
+	
+	printf("la cantidad de millas a metros es de: %f\n", milla);
+	printf("la cantidad de pie a yardas  es: %.2f\n", yarda );
+	printf("la cantidad de pulgadas de %f expresadas en metros es de %.2f\n",pulgada, mts);
+	
+	return 0;
+	system ("\n pause");
+	
+}*/
+
+ 
 
 //16-DESARROLLE UN DIAGRAMA DE FLUJO QUE PERMITA CALCULAR EL PROMEDIO DE LAS
 //NOTAS DE UN CURSO. EL ALGORITMO TERMINA CUANDO SE INGRESA LA NOTA 0.
@@ -199,3 +245,4 @@ return 0;
 
     return 0;
 } 
+

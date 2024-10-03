@@ -146,7 +146,7 @@ return 0;
 
 //ejercicio 14
 
-int main() {
+/* int main() {
     int i, a = 0, b = 0;
     char opc;
 
@@ -177,4 +177,38 @@ int main() {
 
     return 0;
 }
+*/
+
+//ejercicio 8
+
+/*int main(){
+	float num1, num2, resultado;
+	char opc;
+	
+	printf("ingrese numero 1: ");
+	scanf("%f", &num1);
+	printf("ingrese numero 2: ");
+	scanf("%f", &num2);
+	
+	printf("elija la operacion(+,-,*,/): ");
+	scanf(" %c", &opc);
+	
+	switch(opc){	
+	case'+': resultado= num1+num2;
+	break;
+	case'-': resultado= num1+num2;
+	break;
+	case'*': resultado= num1*num2;
+	break;
+	case'/': resultado= num1/num2;
+	break;
+	}
+	printf("el resultado de la operacion es de: %f\n,", resultado);
+	
+	return 0;
+	
+	system("\n pause");
+	
+}*/
+
 
