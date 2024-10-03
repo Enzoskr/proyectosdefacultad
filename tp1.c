@@ -177,3 +177,25 @@ int main(){
 
 return 0;
 } */
+
+
+//16-DESARROLLE UN DIAGRAMA DE FLUJO QUE PERMITA CALCULAR EL PROMEDIO DE LAS
+//NOTAS DE UN CURSO. EL ALGORITMO TERMINA CUANDO SE INGRESA LA NOTA 0.
+
+ int main(){
+    float nota, promedio, suma = 0;
+    int contador = 0;
+
+    do{
+        printf("Ingrese la nota: ");
+        scanf("%f", &nota);
+        suma += nota;
+        contador++;
+    }while(nota != 0);
+
+    promedio = suma / (contador - 1);
+
+    printf("El promedio de las notas es: %.2f\n", promedio);
+
+    return 0;
+} 
