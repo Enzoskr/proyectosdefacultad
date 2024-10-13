@@ -32,6 +32,8 @@ int main() {
             printf("ingrese el anticipo:\n");
             scanf("%f", &anticipo);
             contv2000=contv2000+1;
+        }else{
+            anticipo=0;
         }
         
         
@@ -51,6 +53,11 @@ int main() {
             
         importeapagar=(montoviatico-anticipo);
 
+        
+        
+
+
+
         if (importeapagar>0)
         {
             printf("el importe a pagar es: %.2f\n", importeapagar);
@@ -65,7 +72,7 @@ int main() {
 
     } while (strcmp(seguir, "si")==0);
     
-    sfcont(contv2000);
+    fcont(contv2000);
 
 }
 float fmontoviatico(float opca, float opcb,float opcc ){
