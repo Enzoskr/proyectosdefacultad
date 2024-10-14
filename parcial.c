@@ -19,7 +19,7 @@ int main(){
     	//fflush(stdin);
     	scanf(" %s", patente);
     	printf("ingrese la velocidad del vehiculo:(expresada en kilometros)\n");
-    	scanf("%d", &velvehiculo);	
+    	scanf("%f", &velvehiculo);	
     	
     	
     
