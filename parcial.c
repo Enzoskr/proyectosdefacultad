@@ -11,7 +11,7 @@ int main(){
 	float velvehiculo,calcularmulta;	
     char patente[12],seguir[3];
     int contfotomulta=0, acummontototal=0;
-    int multamayvel=0, numradarvel=0,ban=1;
+    int multamayvel=0, numradarvel=0;
     
     
     do
@@ -24,19 +24,20 @@ int main(){
     	printf("ingrese la velocidad del vehiculo:(expresada en kilometros):\n");
     	scanf("%f", &velvehiculo);
     	
+    	calcularmulta=fcalcularmulta(velvehiculo);
+    	
+    	
     	if (calcularmulta>0){
-    		contfotomulta=contfotomulta+1;
+    		contfotomulta++;
     		acummontototal=acummontototal+calcularmulta;
 		}
 		
+		if(velvehiculo>multamayvel){
+			multamayvel=velvehiculo;
+			numradarvel=numradar;
+		}
 		
-    	
-    	
-    	
-    	
-    
 	
-	calcularmulta=fcalcularmulta(velvehiculo);
 	
 	printf("el vehiculo de patente %s, precio de la multa es: %.2f\n",patente, calcularmulta); 
 
@@ -78,5 +79,3 @@ void fmostrar(int opca, int opcb, int opcc, int radar){
 	}
 }
 	
-
-
