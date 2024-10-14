@@ -4,22 +4,27 @@
 #include <math.h>
 
 float fcalcularmulta(float velocidad);
+void fmostrar(int opca, float opcb, float opcc);
 
 int main(){
 	int numradar,preciomulta;
 	float velvehiculo,calcularmulta;	
-	
     char patente[12],seguir[3];
+    int contfotomulta=0, acummontototal=0;
+    int multamayvel=0,  ban=1;
+    
     
     do
     {
     	printf("ingrese el numero del radar:(de 1 a 4)\n");
     	scanf("%d",&numradar);
-    	printf("Ingrese la patente:(valorcadena)\n");
+    	printf("Ingrese la patente:(valorcadena)\n (ejemplo: abc123 o aa123bb):\n");
     	//fflush(stdin);
     	scanf(" %s", patente);
-    	printf("ingrese la velocidad del vehiculo:(expresada en kilometros)\n");
-    	scanf("%f", &velvehiculo);	
+    	printf("ingrese la velocidad del vehiculo:(expresada en kilometros):\n");
+    	scanf("%f", &velvehiculo);
+    	
+    	mostrar=fmostrar(contfotomulta, acummontototal,multamayvel );
     	
     	
     
@@ -35,10 +40,13 @@ int main(){
     }
 	while (strcmp(seguir, "si") == 0);{
 		
+		mostrar=fmostrar(contfotomultas,)
+		
+		
+		
 	}
 }
-	
-	float fcalcularmulta(float velocidad) {
+	float fcalcularmulta (float velocidad) {
 	if (velocidad>40 && velocidad<=45){
 	return 50000;
 	}
@@ -50,7 +58,13 @@ int main(){
 	{
 	return 150000;
 	}
-	
+	return 0;
+}
+
+void fmostrar(int opca, float opcb, float opcc){
+	printf("La cantidad de fotomultas tomadas por el radar son:%d\n", opca);
+	printf("El monto total de las multas realizadas es:%f\n", opcb);
+	printf("La multa con mayor velocidad es de: %f\n", opcc);
 }
 	
 
