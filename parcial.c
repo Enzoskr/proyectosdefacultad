@@ -33,10 +33,14 @@
 				multamayvel=velvehiculo;
 				numradarvel=numradar;
 			}
-			
+		
+		if(velvehiculo>40){
+		printf("el vehiculo de patente %s, precio de la multa es: %.2f\n",patente, calcularmulta);}
+		else{
+			printf("no hay multas existentes.\n");
+		}
 		
 		
-		printf("el vehiculo de patente %s, precio de la multa es: %.2f\n",patente, calcularmulta); 
 	
 	    	
 	        
