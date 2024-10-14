@@ -1,3 +1,5 @@
+	//parcial escudero enzo dni 43083245
+	
 	#include <stdio.h>
 	#include <string.h>
 	#include <stdlib.h>
@@ -39,12 +41,8 @@
 		else{
 			printf("no hay multas existentes.\n");
 		}
-		
-		
-	
-	    	
-	        
-	    printf("desea seguir? si-no\n");
+		        
+	    printf("desea seguir ingresando multas? si-no\n");
 	    scanf("%s", seguir);
 	    }
 		while (strcmp(seguir, "si") == 0);
@@ -72,7 +70,7 @@
 	
 	void fmostrar(int opca, float opcb, float opcc, int radar){
 		printf("La cantidad de fotomultas tomadas por el radar son: %d\n", opca);
-		printf("El monto total de las multas realizadas es:%f\n", opcb);
+		printf("El monto total de las multas realizadas es:%.2f\n", opcb);
 		if (opca>0)
 		printf("La multa con mayor velocidad es de: %.2f km, y fue captada por el radar %d\n", opcc, radar);
 		else{
