@@ -6,6 +6,7 @@
 
 float calcularresultado(float fop1, float fop2, char foperador);
 //void registraroperacion(float *op1, float *op2, char *operador, float op1, float op2, char operador, int *indice )
+void emitirinforme();
 
 
 int main(){
@@ -39,10 +40,14 @@ int main(){
                 printf("El resultado de la operacion es: %.2f\n", resultado);
 
                 //registraroperacion(op1, op2, operador, resultado 
-                
+           
             }
+            case 'B':
+                emitirinforme();
 
         }
+   
+            
 
 
 
@@ -85,11 +90,7 @@ float calcularresultado(float fop1, float fop2, char foperador){
 
 }
 
-// void registraroperacion(float *op1, float *op2, char *operador, float op1, float op2, char operador, int *indice ){
-//     *(op1 + *indice) = op1;
-//     *(op2 + *indice) = op2;
-//     *(operador + *indice) = operador;
-//     (*indice)++;
+void emitirinforme (float *vop1, float *vop2, char *voperador   ){
 
-// }
+}
 
