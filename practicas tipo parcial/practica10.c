@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int ftotaldevuelo(int opca,int opcb,int opcc);
-void mostrar(int vda,int vdb,int vdc,int tpomenorvuelo, int numeromenortiempovuelo );
+void mostrarporempleado(int vda,int vdb,int vdc,int tpomenorvuelo, int numeromenortiempovuelo );
 
 
 
@@ -78,7 +78,7 @@ int main(){
 
     } while (strcmp(seguir, "si") == 0);
 
-    mostrar(contnac,contmercosur,continternacional,vuelomenortiempo,numeromenortiempovuelo);
+    mostrarporempleado(contnac,contmercosur,continternacional,vuelomenortiempo,numeromenortiempovuelo);
 
     
 }
@@ -89,7 +89,7 @@ int main(){
     return ftotaldevuelo;
     }
 
-    void mostrar(int vda,int vdb,int vdc,int menorvuelo,int tpomenorvuelo){
+    void mostrarporempleado(int vda,int vdb,int vdc,int menorvuelo,int tpomenorvuelo){
 
         printf("la cantidad de vuelos con destino nacional son:%d\n"
         "la cantidad de vuelos con destino internacional mercosur son:%d\n"
