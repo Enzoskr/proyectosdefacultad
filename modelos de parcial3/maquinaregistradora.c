@@ -1,96 +1,132 @@
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include <conio.h>
 
-#define tam 50
+#define maxoperaciones 50
 
-float calcularresultado(float fop1, float fop2, char foperador);
-//void registraroperacion(float *op1, float *op2, char *operador, float op1, float op2, char operador, int *indice )
-void emitirinforme();
+float calcularoperacion(float fop1,float fop2, char tipo );
+void registraroperacion(float *operando1 , float *operando2, char *tipo, float op1, float op2, char optipo, int indice);
+void emitirinforme(float *operando1, float *operando2, char *tipos, int cantoperaciones);
 
 
 int main(){
-    char salir;
-    char opcion;
-    int indice = 0;
-    float op1, op2;
-    char operador;
-    float resultado ; 
-    do{
-        printf("A- efectuar calculo\n");
-        printf("B- emitir informe\n");
-        printf("C- salir\n");
-        printf("Elija una opcion: ");
-        scanf(" %c", &opcion);
-        fflush(stdin);
+    float operando1[maxoperaciones], operando2[maxoperaciones];
+    char tipos[maxoperaciones];
+    char opc;
+    int cantoperaciones=0;
+    float op1, op2, resultado;
+    char tipooperacion;
 
-        switch (opcion == 'A'){           
-            if (indice >=tam){
-                printf("No hay mas espacio para operaciones\n");
-            }else{
-                printf("Ingrese operador 1: ");
+
+    do
+    {
+        printf("A-efectuar calculo\n");
+        printf("B-emitir informe\n");
+        printf("C-salir\n");
+        printf("Ingrese opcion: ");
+        scanf(" %c", &opc);
+        if (opc=='A'){
+            if (cantoperaciones<maxoperaciones)
+            {
+                printf("Ingrese operando 1: ");
                 scanf("%f", &op1);
-                printf("Ingrese operador 2: ");
+                printf("Ingrese operando 2: ");
                 scanf("%f", &op2);
-                printf("ingrese el tipo de operacion:\n(s: suma, r: resta, m: multiplicacion, d: division) ");
-                scanf(" %c", &operador);            
-                fflush(stdin);
+                printf("Ingrese tipo de operacion:('s'-suma,'r'- resta, 'm'-multiplicacion,'d'-division ) ");
+                scanf(" %c", &tipooperacion);
 
-                resultado= calcularresultado(op1, op2, operador  );
+                resultado=calcularoperacion(op1,op2,tipooperacion);
+                system("cls");
                 printf("El resultado de la operacion es: %.2f\n", resultado);
 
-                //registraroperacion(op1, op2, operador, resultado 
-           
+                registraroperacion(operando1,operando2,tipos,op1,op2,tipooperacion,cantoperaciones);
+                cantoperaciones++;
+
             }
-            case 'B':
-                emitirinforme();
-
+            else
+            {
+            printf("No hay mas lugar para operaciones\n");            
         }
-   
-            
-
-
-
-
-        char salir;
-        scanf("%c", &salir);
-        fflush(stdin);
-
-    } while (salir != 'C' || salir != 'c');
-    printf("Gracias por usar el programa\n");
-    return 0;
-
-
-    
-}
-
-
-float calcularresultado(float fop1, float fop2, char foperador){
-    float resultado;
-    switch (foperador)
-    {
-    case 's':
-    case 'S':
-        resultado = fop1 + fop2;
-        break;
-    case 'r':	
-    case 'R':
-        resultado = fop1 - fop2;
-        break;
-    case 'm':
-    case 'M':
-        resultado = fop1 * fop2;
-        break;
-    case 'd':
-    case 'D':
-        resultado = fop1 / fop2;
-        break;
         }
         
+        else if(opc=='B'){
+            emitirinforme(operando1,operando2,tipos,cantoperaciones);
+
+            }
+            else if (opc=='C')
+            {
+                printf("Saliendo del programa\n");        
+    }
+    } 
+    while (opc != 'C');
+    return 0;
+}
+
+float calcularoperacion(float fop1,float fop2, char tipo ){
+    float resultado;
+    switch (tipo)
+    {
+    case 's':
+        resultado=fop1+fop2;
+        break;
+    case 'r':
+        resultado=fop1-fop2;
+        break;
+    case 'm':
+        resultado=fop1*fop2;
+        break;
+    case 'd':
+    if (fop2!=0)
+    {
+        resultado=fop1/fop2;
+    }
+    else
+    {
+        printf("No se puede dividir por cero\n");
+    }
+            break;  
+    }
+    return resultado;
+    
 
 }
 
-void emitirinforme (float *vop1, float *vop2, char *voperador   ){
-
+void registraroperacion(float *operando1 , float *operando2, char *tipo, float op1, float op2, char optipo, int indice){
+    *(operando1+indice)=op1;
+    *(operando2+indice)=op2;
+    *(tipo+indice)=optipo;
 }
 
+void emitirinforme(float *operando1, float *operando2, char *tipos, int cantoperaciones){
+    int i, suma=0, resta=0, multiplicacion=0, division=0;
+    for(i=0;i<cantoperaciones;i++){
+        switch (*(tipos+i))
+        {
+        case 's':
+        printf("+");
+            suma++;
+            break;
+        case 'r':
+        printf("-");
+            resta++;
+            break;
+        case 'm':
+        printf("*");
+            multiplicacion++;
+            break;
+        case 'd':
+        printf("/");
+            division++;
+            break;
+        } 
+    printf(" %.2f = %.2f\n", *(operando1+i), calcularoperacion (*(operando1+i),*(operando2+i),*(tipos+i))); 
+    }
+    printf("resumen de operaciones:\n");
+    printf("suma: %d\n", suma);
+    printf("resta: %d\n", resta);
+    printf("multiplicacion: %d\n", multiplicacion);
+    printf("division: %d\n", division);
+    printf("total de operaciones: %d\n", cantoperaciones);
+    
+   
+
+    }
