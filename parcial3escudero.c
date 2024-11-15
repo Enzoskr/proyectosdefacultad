@@ -60,3 +60,28 @@ int vmenu(){
 //     }
     
 // }
+
+
+
+// void mostrardatos(int *vx, int *vy, int *vz, int *vw, int i)
+// {
+//      int max=0, j;
+    
+        
+//          for(j=0;j<i;j++)
+//          {
+            
+//             if (*(vw+j) == 2 )
+//              { printf("%d\t %d\t %d\t %d\n",*(vx+j),*(vy+j),*(vz+j),*(vw+j));
+             
+//                if (*(vz+j) > max) 
+// 			      {max=*(vz+j);}
+//              }
+             
+            
+//          }
+//             printf("maxima velocidad camion 2  %d\n",max);
+    
+// }
+
+// esto me sirve de referencia para utilizar una bandera que se activa con la velocidad del camion 2
