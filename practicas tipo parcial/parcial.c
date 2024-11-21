@@ -77,6 +77,3 @@
 			printf("no se registraron multas.\n");
 		}
 	}
-		
-	
-	
